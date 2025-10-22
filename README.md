@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 23 00 35" src="https://github.com/user-attachments/assets/d254b112-8a5d-48aa-aa1b-2815fcd0a3af" /># Weather App 🌦️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and bilingual weather application built with **React**, **TypeScript**, **Material-UI**, **Tailwind CSS**, and **React Router Dom**. The app fetches real-time weather data from the **Weatherbit API** and supports **dark/light mode** with **i18n** for multiple languages.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- 🌗 Dark and Light Mode toggle  
+- 🌐 Bilingual support (English & Persian) using i18n  
+- 📱 Fully responsive design for mobile, tablet, and desktop  
+- 🖼️ Weather icons and dynamic backgrounds based on current conditions  
+- ⚡ Fast and smooth user experience with React  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React, TypeScript  
+- **Styling:** Material-UI, Tailwind CSS  
+- **Routing:** React Router Dom  
+- **Icons:** React Icons  
+- **Internationalization:** i18n (react-i18next)  
+- **API:** Weatherbit API  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Installation & Usage
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/yourusername/weather-app.git
+   cd weather-app
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+.env :
+api and api key for used
+VITE_API_KEY = ebbf89888135489da468f43e31001e57
+VITE_BASE_URL = https://api.weatherbit.io/v2.0
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 23 00 35" src="https://github.com/user-attachments/assets/fdf06b16-2269-4d5c-962c-016b5fdc6178" />
+<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 23 00 35" src="https://github.com/user-attachments/assets/c54e1886-456b-4492-98fc-07e5b0b07324" />
+<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 25 15" src="https://github.com/user-attachments/assets/008d1daf-833c-43c8-ac33-574acfc8ed1a" />
+
+
