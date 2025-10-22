@@ -26,5 +26,10 @@
   "Low": "Low",
   "High": "High",
   "ChartTitle": "Minimum and maximum of the last week",
-  "Forecast": "2 weeks Forecast"
+  "Forecast": "2 weeks Forecast",
+  "PageNotFound": "Page Not Found",
+  "PageNotFoundDescription": "We're sorry, but the page you were looking for could not be found. You may have entered the page address incorrectly or the page may have been deleted. You can use the search bar to find information or return to the home page.",
+  "BackToHome": "Back To Home",
+  "ErrorOccurred": "Error Occurred",
+  "ErrorDescription": "Sorry, there was a problem loading the information. Please try again later."
 }

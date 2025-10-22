@@ -1,34 +1,47 @@
+import { Box, Button, Typography, Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-const NotFind = () => {
+import { useTranslation } from "react-i18next";
+import Layout from "../layout/layout";
+
+const NotFound = () => {
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
   return (
-    <div className="bg-[#FCFEFD] relative  h-screen w-full  ">
-      <div className="md:flex block absolute left-0 right-0 top-20 md:top-1/4 bo max-w-3xl w-fit justify-around  mx-auto">
-        {/* <img
-          src={QM}
-          alt=""
-          className="  rounded-lg  w-[250px] h-[250px] mb-8  mx-auto "
-        /> */}
-        <div className=" w-60 mx-auto ">
-          <h1 className="font-bold">صفحه ای یافت نشد </h1>
-          <p className="mt-4 text-justify">
-            متاسفیم که صفحه مورد نظر شما یافت نشد. ممکن است آدرس صفحه را اشتباه
-            وارد کرده باشید یا صفحه مورد نظر به دلایلی حذف شده باشد. برای یافتن
-            اطلاعات مورد نظر خود، می‌توانید از نوار جستجو استفاده کنید یا به
-            صفحه اصلی برگردید. تیم پشتیبانی ما همیشه آماده پاسخگویی به سوالات
-            شما است.
-          </p>
-          <button
-            className={`text-nowrap bg-blue-500 text-white w-full mx-auto h-12  block mt-10 rounded-[10px]  `}
+    <Layout>
+      <Box
+        sx={{
+          height: "fit-content",
+          width: "fit-content",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          px: 2,
+          position: "absolute",
+          inset: 0,
+          m: "auto",
+        }}
+      >
+        <Container maxWidth="sm" sx={{ textAlign: "center" }}>
+          <Typography variant="h3" fontWeight="bold" gutterBottom>
+            {t("PageNotFound")}
+          </Typography>
+          <Typography variant="body1" sx={{ mt: 2, textAlign: "justify" }}>
+            {t("PageNotFoundDescription")}
+          </Typography>
+
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ mt: 4, borderRadius: 2, px: 4, py: 1.5 }}
             onClick={() => navigate("/")}
           >
-            برگشت به صفحه اصلی
-          </button>
-        </div>
-      </div>
-    </div>
+            {t("BackToHome")}
+          </Button>
+        </Container>
+      </Box>
+    </Layout>
   );
 };
 
-export default NotFind;
+export default NotFound;

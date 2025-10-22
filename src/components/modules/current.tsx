@@ -29,7 +29,6 @@ const Current = ({ capital }: Props) => {
   const update = async () => {
     refetch();
     setTime(getTodayDateInfo());
-    setAir(getAirDetection(String(data?.data?.[0]?.weather?.code)));
   };
 
   useEffect(() => {

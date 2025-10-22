@@ -5,8 +5,8 @@ import Footer from "./footer";
 import Header from "./header";
 import { Box, Container } from "@mui/material";
 interface Props {
-  setCapital: React.Dispatch<React.SetStateAction<CapitalsInterface | null>>;
-  capital: CapitalsInterface | null;
+  setCapital?: React.Dispatch<React.SetStateAction<CapitalsInterface | null>>;
+  capital?: CapitalsInterface | null;
 }
 const Layout = ({ children, setCapital, capital }: Props & ChildrenType) => {
   return (

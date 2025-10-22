@@ -22,16 +22,28 @@ const Footer = () => {
 
   return (
     <Box
-      dir="rtl"
       sx={(theme) => ({
-        direction: "rtl",
         background:
           theme.palette.mode === "dark"
-            ? `linear-gradient(
+            ? lang === "fa"
+              ? `linear-gradient(
+          to right,
+          #292F45 100%,     
+          #3F4861 50%,    
+          #151D32 100%    
+        )`
+              : `linear-gradient(
           to right,
           #292F45 0%,     
           #3F4861 50%,    
           #151D32 100%    
+        )`
+            : lang === "fa"
+            ? `linear-gradient(
+          to right,
+          #F3FAFE 100%,     
+          #CCDDDD 50%,    
+          #F3FAFE 100%    
         )`
             : `linear-gradient(
           to right,

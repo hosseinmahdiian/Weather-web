@@ -10,8 +10,8 @@ import ModalSetting from "../modules/modalSetting";
 import SearchCapitals from "../modules/searchCapitals";
 
 interface Props {
-  setCapital: React.Dispatch<React.SetStateAction<CapitalsInterface | null>>;
-  capital: CapitalsInterface | null;
+  setCapital?: React.Dispatch<React.SetStateAction<CapitalsInterface | null>>;
+  capital?: CapitalsInterface | null;
 }
 const Header = ({ setCapital, capital }: Props) => {
   const [open, setOpen] = useState<boolean>(false);
@@ -65,11 +65,13 @@ const Header = ({ setCapital, capital }: Props) => {
             position: "relative",
           }}
         >
-          <SearchCapitals
-            setCapital={setCapital}
-            capital={capital}
-            style={{ width: 295, display: { xs: "none", sm: "block" } }}
-          />
+          {!!capital && !!setCapital && (
+            <SearchCapitals
+              setCapital={setCapital}
+              capital={capital}
+              style={{ width: 295, display: { xs: "none", sm: "block" } }}
+            />
+          )}
 
           <IconButton
             onClick={() => setOpen(true)}

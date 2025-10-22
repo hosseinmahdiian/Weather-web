@@ -1,16 +1,14 @@
-import { Skeleton, useTheme } from "@mui/material";
+import { Skeleton } from "@mui/material";
 
 const SkeletonText = ({ style }: { style: Object }) => {
-  const theme = useTheme();
-
   return (
     <Skeleton
       variant="rounded"
-      sx={{
+      sx={(theme) => ({
         ...style,
-        bgcolor: theme.palette.mode === "dark" ? "#192F45" : "#F1E9EE",
+        bgcolor: theme.palette.mode === "dark" ? "#2A3A55" : "#E0E744D",
         borderRadius: 2,
-      }}
+      })}
     />
   );
 };

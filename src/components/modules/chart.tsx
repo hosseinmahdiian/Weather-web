@@ -32,6 +32,7 @@ const Chart = ({ capital }: Props) => {
     setDates(data?.data.map((item: any) => item?.datetime));
   }, [data?.data]);
 
+  console.log(error);
   if (error) return <ErrorPage />;
 
   if (
