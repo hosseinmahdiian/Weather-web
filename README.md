@@ -38,13 +38,15 @@ A responsive and bilingual weather application built with **React**, **TypeScrip
    cd weather-app
 npm install
 
-.env :
 
 
-<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 24 59" src="https://github.com/user-attachments/assets/f6b817a2-a865-493f-9bb1-a421fa457621" />
-<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 25 05" src="https://github.com/user-attachments/assets/ed0f468a-4667-48e9-b6ae-8464fa679858" />
+## Images 
 
-<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 23 00 22" src="https://github.com/user-attachments/assets/d36b9ecc-938d-46a4-a8b0-115af197b715" />
+- <img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 24 59" src="https://github.com/user-attachments/assets/f6b817a2-a865-493f-9bb1-a421fa457621" />
+-
+- <img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 25 05" src="https://github.com/user-attachments/assets/ed0f468a-4667-48e9-b6ae-8464fa679858" />
+-
+- <img width="1710" height="1112" alt="Screenshot 2025-10-22 at 23 00 22" src="https://github.com/user-attachments/assets/d36b9ecc-938d-46a4-a8b0-115af197b715" />
 
 
 
