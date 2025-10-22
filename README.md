@@ -26,9 +26,9 @@ A responsive and bilingual weather application built with **React**, **TypeScrip
 - **API:** Weatherbit API
 - https://www.weatherbit.io/
 
-## Base API and API key for used
-VITE_API_KEY = ebbf89888135489da468f43e31001e57
-VITE_BASE_URL = https://api.weatherbit.io/v2.0
+# Base API and API key for used
+- VITE_API_KEY = ebbf89888135489da468f43e31001e57
+- VITE_BASE_URL = https://api.weatherbit.io/v2.0
 ---
 ## Installation & Usage
 
