@@ -1,5 +1,3 @@
-<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 23 00 35" src="https://github.com/user-attachments/assets/d254b112-8a5d-48aa-aa1b-2815fcd0a3af" /># Weather App 🌦️
-
 A responsive and bilingual weather application built with **React**, **TypeScript**, **Material-UI**, **Tailwind CSS**, and **React Router Dom**. The app fetches real-time weather data from the **Weatherbit API** and supports **dark/light mode** with **i18n** for multiple languages.
 
 ---
@@ -39,8 +37,9 @@ VITE_API_KEY = ebbf89888135489da468f43e31001e57
 VITE_BASE_URL = https://api.weatherbit.io/v2.0
 
 
-<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 23 00 35" src="https://github.com/user-attachments/assets/fdf06b16-2269-4d5c-962c-016b5fdc6178" />
-<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 23 00 35" src="https://github.com/user-attachments/assets/c54e1886-456b-4492-98fc-07e5b0b07324" />
-<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 25 15" src="https://github.com/user-attachments/assets/008d1daf-833c-43c8-ac33-574acfc8ed1a" />
+<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 25 15" src="https://github.com/user-attachments/assets/5709739d-f6fa-4818-ac8c-f257905bab46" />
+
+<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 25 11" src="https://github.com/user-attachments/assets/0dc42b26-7050-4094-a258-f94e1bb9eb9d" />
+
 
 
