@@ -10,7 +10,7 @@ const formatDate = (date: Date) => {
 export const DailyHistoricalWeatherAPI = async (city: string = "Tehran") => {
   const endDate = new Date();
   const startDate = new Date();
-  startDate.setDate(endDate.getDate() - 6);
+  startDate.setDate(endDate.getDate() - 7);
 
   const res = await BaseAxios.get(`/history/daily`, {
     params: {

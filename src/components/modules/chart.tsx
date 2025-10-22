@@ -7,15 +7,25 @@ import ErrorPage from "../templates/errorPage";
 import { useEffect, useState } from "react";
 import { LineChart } from "@mui/x-charts/LineChart";
 import SkeletonText from "./skeletonText";
+import { getTodayDateInfo, getWeekdaysArray } from "../../functions/functions";
 
 interface Props {
   capital: CapitalsInterface | null;
 }
+
+type WeekdaySortType = {
+  fa: string[];
+  en: string[];
+};
+
 const Chart = ({ capital }: Props) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [lowTemp, setLowTemp] = useState([]);
   const [highTemp, setHightTemp] = useState([]);
   const [dates, setDates] = useState([]);
+  const [weekdaySort, setWeekdaySort] = useState<WeekdaySortType | null>(null);
+  const lang = i18n.language === "fa" ? "fa" : "en";
+
   const { data, isLoading, error, refetch, isFetching } = useQuery({
     queryKey: ["DailyHistoricalWeather"],
     queryFn: () => DailyHistoricalWeatherAPI(capital?.name),
@@ -29,10 +39,16 @@ const Chart = ({ capital }: Props) => {
   useEffect(() => {
     setLowTemp(data?.data.map((item: any) => item?.min_temp));
     setHightTemp(data?.data.map((item: any) => item?.max_temp));
-    setDates(data?.data.map((item: any) => item?.datetime));
+    setDates(data?.data.map((item: any) => getTodayDateInfo(item?.datetime)));
   }, [data?.data]);
 
-  console.log(error);
+  useEffect(() => {
+    const sorted = getWeekdaysArray(dates);
+    setWeekdaySort(sorted);
+  }, [dates]);
+
+  console.log(weekdaySort?.[lang]);
+
   if (error) return <ErrorPage />;
 
   if (
@@ -40,7 +56,8 @@ const Chart = ({ capital }: Props) => {
     isFetching ||
     !lowTemp?.length ||
     !highTemp?.length ||
-    !dates?.length
+    !dates?.length ||
+    !weekdaySort
   )
     return (
       <Box
@@ -72,7 +89,7 @@ const Chart = ({ capital }: Props) => {
           { data: lowTemp, label: t("Low") },
           { data: highTemp, label: t("High") },
         ]}
-        xAxis={[{ scaleType: "point", data: dates }]}
+        xAxis={[{ scaleType: "point", data: weekdaySort?.[lang] }]}
       />
     </Box>
   );

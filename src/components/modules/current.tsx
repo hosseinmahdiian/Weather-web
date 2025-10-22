@@ -33,7 +33,7 @@ const Current = ({ capital }: Props) => {
 
   useEffect(() => {
     update();
-    const timer = setInterval(update, 10 * 1000);
+    const timer = setInterval(update, 30 * 1000);
     return () => clearInterval(timer);
   }, [capital]);
 

@@ -5,6 +5,7 @@ import Rain from "../../public/images/Rain cloud.png";
 import LowRain from "../../public/images/Sun cloud angled rain.png";
 import wind from "../../public/images/Moon cloud fast wind.png";
 import { capitals } from "../constants/capitals";
+import type { DateType } from "../types/types.type";
 
 export const getTodayDateInfo = (inputDate?: string) => {
   const today = inputDate ? new Date(inputDate) : new Date();
@@ -26,8 +27,8 @@ export const getTodayDateInfo = (inputDate?: string) => {
       monthName = "",
       day = "",
       year = "";
-      // hour = "",
-      // minute = "";
+    // hour = "",
+    // minute = "";
 
     parts.forEach((p) => {
       if (p.type === "weekday") weekday = p.value;
@@ -42,6 +43,7 @@ export const getTodayDateInfo = (inputDate?: string) => {
       hour: "numeric",
       minute: "numeric",
       hour12: true,
+      numberingSystem: "latn",
     }).format(today);
 
     return { weekday, monthName, day, year, time };
@@ -93,4 +95,17 @@ export const getAirDetection = (code: string) => {
 export const findCapital = (capital: string) => {
   const find = capitals.find((item) => capital === item.name);
   return find;
+};
+
+export const getWeekdaysArray = (dates: DateType[]) => {
+  console.log(dates);
+
+  return dates?.reduce(
+    (acc, item) => {
+      acc.fa.push(item.fa.weekday);
+      acc.en.push(item.en.weekday);
+      return acc;
+    },
+    { fa: [] as string[], en: [] as string[] }
+  );
 };
