@@ -5,7 +5,7 @@ import Layout from "../layout/layout";
 
 const NotFound = () => {
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Layout>
