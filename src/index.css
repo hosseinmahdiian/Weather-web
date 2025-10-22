@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant child (& > *);
+@custom-variant child-hover (& > *:hover);
+
+.showClouds {
+  background: radial-gradient(
+    ellipse,
+    rgba(78, 35, 107, 0.5) 0%,
+    rgba(44, 12, 57, 0) 70%
+  );
+  border: "50%";
+}
+
+@font-face {
+  font-family: "IranSans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/public/fonts/IranSansWeb/IRANSansWeb\(FaNum\)_Medium.woff")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/public/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@theme {
+  --font-iranSans: "IranSans", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
