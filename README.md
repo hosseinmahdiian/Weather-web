@@ -37,9 +37,10 @@ VITE_API_KEY = ebbf89888135489da468f43e31001e57
 VITE_BASE_URL = https://api.weatherbit.io/v2.0
 
 
-<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 25 15" src="https://github.com/user-attachments/assets/5709739d-f6fa-4818-ac8c-f257905bab46" />
+<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 24 59" src="https://github.com/user-attachments/assets/f6b817a2-a865-493f-9bb1-a421fa457621" />
+<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 25 05" src="https://github.com/user-attachments/assets/ed0f468a-4667-48e9-b6ae-8464fa679858" />
 
-<img width="1710" height="1112" alt="Screenshot 2025-10-22 at 20 25 11" src="https://github.com/user-attachments/assets/0dc42b26-7050-4094-a258-f94e1bb9eb9d" />
+![Uploading Screenshot 2025-10-22 at 23.00.22.png…]()
 
 
 
