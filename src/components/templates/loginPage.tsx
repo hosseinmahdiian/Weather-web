@@ -37,6 +37,13 @@ const LogInPage = () => {
     }
   }, []);
 
+  const handleLogin = () => {
+    if (name.trim()) {
+      localStorage.setItem("name", name);
+      navigate("/", { replace: true });
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -109,6 +116,11 @@ const LogInPage = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             sx={{ mb: 4 }}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleLogin();
+              }
+            }}
           />
 
           <Button
@@ -119,12 +131,9 @@ const LogInPage = () => {
               bgcolor: "#2196F3",
               color: "#FFFFFF",
             }}
-            disabled={!name}
+            disabled={name.trim() == ""}
             onClick={() => {
-              if (name) {
-                localStorage.setItem("name", name);
-                navigate("/", { replace: true });
-              }
+              handleLogin();
             }}
           >
             {t("Login")}
